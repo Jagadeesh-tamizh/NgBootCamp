@@ -1,46 +1,52 @@
 # 🚀 NgBootCamp
 
 An **Angular Bootcamp Playground** project where we explore Angular features step by step with practical demos, clean UI, and modular examples.  
-The project is built using **Angular Standalone Components** (no NgModules), styled with **LESS**, and organized for easy learning.
+This project is built using **Angular Standalone Components**, styled with **LESS**, and organized for easy learning.
 
 ---
 
 ## 📚 Features Covered
 
 ### ✅ Basics
-- **Components** – building reusable UI blocks.
-- **Directives** – using `*ngIf`, `*ngFor`, `ngClass`, and a custom `HighlightDirective`.
+- **Components** – building reusable UI blocks with parent–child communication.
+- **Directives** – demos for `*ngIf`, `*ngFor`, `ngClass`, and a custom `HighlightDirective`.
 
 ### ✅ Reactivity
-- **Signals** – Angular's new reactivity model.
-  - Create and update signals.
-  - Computed signals for derived state.
-  - Effects for reactive side effects.
+- **Signals** – Angular’s modern reactivity model.
+  - Signals for state
+  - Computed values
+  - Effects for side reactions
 
 ### ✅ Services & Dependency Injection
-- **Shared Service** – demonstrate state sharing between components.
-- **Dependency Injection** – understanding Angular's DI system with `inject()`.
+- Shared `CounterService` example.
+- Box A & Box B demo with injected service.
+- Showcasing Angular’s `inject()` function.
+
+### ✅ Pipes
+- Custom `ReversePipe`.
+- Built-in pipe usage in a `pipes-demo` component.
 
 ---
 
 ## 🖼 UI Overview
 
 - **Navigation Bar** with emojis for quick access:
-  - 📐 Directives
-  - 📡 Signals
   - 🧩 Services
-- **Home Page** with clickable cards to navigate to each feature demo.
-- **Consistent Styling** with cards, buttons, and fonts (using [Inter](https://fonts.google.com/specimen/Inter)).
+  - 📡 Signals
+  - 📐 Directives
+  - 🔄 Pipes  
+- **Home Page** with interactive **cards** linking to each feature.
+- Consistent **card-based styling** and buttons.
 
 ---
 
 ## 🛠 Tech Stack
 
-- **Angular 18+** with standalone APIs
+- **Angular 18+** (Standalone APIs)
 - **TypeScript**
 - **LESS** for styling
-- **Router** for navigation
-- **Signals API** for reactivity
+- **Angular Router**
+- **Signals API**
 
 ---
 
@@ -64,16 +70,7 @@ The project is built using **Angular Standalone Components** (no NgModules), sty
    ng serve
    ```
 
-4. Open [http://localhost:4200](http://localhost:4200) in your browser 🎉
-
----
-
-## 📖 Learning Goals
-
-* Gain hands-on experience with Angular's **modern standalone architecture**.
-* Understand **reusability & modularity** with components, directives, and services.
-* Learn **Angular Signals** and how they simplify reactivity.
-* See how **dependency injection** makes Angular powerful and testable.
+4. Open [http://localhost:4200](http://localhost:4200) 🎉
 
 ---
 
@@ -82,29 +79,56 @@ The project is built using **Angular Standalone Components** (no NgModules), sty
 ```
 src/
  ├─ app/
- │   ├─ home/                # Home page with navigation cards
- │   ├─ directives/          # Directives demo
- │   ├─ signals/             # Signals demo
- │   ├─ services/            # Service & DI demo
- │   ├─ shared/              # Shared services & utilities
- │   ├─ app.component.ts     # Root app component
- │   └─ app.routes.ts        # Application routes
- ├─ assets/                  # Static assets
- ├─ styles.less              # Global styles
+ │   ├─ core/                     # Core services (e.g., CounterService)
+ │   ├─ features/                 # Feature demos
+ │   │   ├─ component-communication/
+ │   │   │   ├─ child-box/
+ │   │   │   ├─ parent-box/
+ │   │   │   └─ component-communication/
+ │   │   ├─ directives/           # Directive demos + HighlightDirective
+ │   │   ├─ home/                 # Landing page with cards
+ │   │   ├─ pipes/                # Pipes feature
+ │   │   │   ├─ components/pipes-demo/
+ │   │   │   └─ pipes/            # ReversePipe
+ │   │   ├─ service-demo/         # Service & DI demo
+ │   │   │   ├─ box-a/
+ │   │   │   ├─ box-b/
+ │   │   │   └─ service-demo/
+ │   │   └─ signals/              # Signals demo
+ │   ├─ shared/                   # Shared UI (e.g., Navbar)
+ │   │   └─ navbar/
+ │   ├─ app.component.*           # Root app
+ │   ├─ app.routes.ts             # Routes
+ │   ├─ app.config.ts             # App configuration
+ │   └─ app.config.server.ts
+ ├─ assets/                       # Static assets
+ ├─ index.html
+ ├─ styles.less                   # Global styles
+ ├─ main.ts                       # Browser bootstrap
+ └─ main.server.ts                # Server bootstrap
 ```
+
+---
+
+## 📖 Learning Goals
+
+* Practice **Angular standalone architecture** (no NgModules).
+* Understand **data flow** between parent & child components.
+* Explore **reusability** with directives, pipes, and services.
+* Master **Signals** for reactivity.
+* Build intuition around **Dependency Injection**.
 
 ---
 
 ## 🌟 Next Steps
 
-* Add more Angular features: **Pipes, Forms, Routing Guards**.
-* Enhance UI with **animations** (Angular Animations or Framer Motion).
-* Extend service demo with **HTTP client & mock APIs**.
-* Deploy to **GitHub Pages** or **Vercel**.
+* Add **Forms (Reactive & Template-driven)**.
+* Add **Route Guards & Lazy Loading**.
+* Demo **HTTPClient** with mock API.
+* Deploy to GitHub Pages / Vercel.
 
 ---
 
 ## 👤 Author
 
-Built by **Jagadeesh T** with guidance from hands-on Angular exploration.
-
+Built by **Jagadeesh T** with hands-on Angular exploration 🚀
