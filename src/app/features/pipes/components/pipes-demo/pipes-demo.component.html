@@ -1,0 +1,82 @@
+<div class="pipes-demo">
+  <h2>Pipes Demo</h2>
+
+  <!-- Built-in Pipes -->
+  <section class="section">
+    <h3>🔠 Built-in Pipes</h3>
+    <div class="card">
+      <input [(ngModel)]="builtInPipeText" placeholder="Type some text to transform using pipes" />
+      <p><strong>Original:</strong> {{ builtInPipeText }}</p>
+      <p><strong>Uppercase:</strong> {{ builtInPipeText | uppercase }}</p>
+      <p><strong>Lowercase:</strong> {{ builtInPipeText | lowercase }}</p>
+    </div>
+  </section>
+
+  <!-- Date Pipe -->
+  <section class="section">
+    <h3>📅 Date Pipe</h3>
+    <div class="card">
+      <div class="date-section">
+        <label for="dateInput">Pick a Date:</label>
+        <input type="date" id="dateInput" [(ngModel)]="selectedDateStr" (change)="updateDate()" />
+
+        <div class="output">
+          <p><strong>Raw JavaScript Date:</strong> {{ selectedDate }}</p>
+          <p><strong>Formatted - short:</strong> {{ selectedDate | date:'shortDate' }}</p>
+          <p><strong>Formatted - long:</strong> {{ selectedDate | date:'fullDate' }}</p>
+          <p><strong>Formatted - time:</strong> {{ selectedDate | date:'shortTime' }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Pipes -->
+  <section class="section">
+    <h3>Angular Common Pipes</h3>
+
+    <!-- Currency Pipe -->
+    <div class="card">
+      <h4>💰 Currency Pipe</h4>
+      <div class="currency-section">
+        <label>Enter Amount:</label>
+        <input type="number" [(ngModel)]="amount" placeholder="Enter number" />
+
+        <label>Select Currency:</label>
+        <select [(ngModel)]="currencyCode">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="INR">INR</option>
+        </select>
+
+        <div class="output">
+          <p><strong>Raw Value:</strong> {{ amount }}</p>
+          <p><strong>Formatted:</strong> {{ amount | currency:currencyCode }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- JSON Pipe -->
+    <div class="card">
+      <h4>🧩 JSON Pipe</h4>
+      <div class="json-section">
+        <label>Enter JSON Object:</label>
+        <textarea [(ngModel)]="jsonInput" rows="3"></textarea>
+
+        <div class="output">
+          <p><strong>Raw Value:</strong> {{ jsonInput }}</p>
+          <p><strong>Formatted JSON:</strong></p>
+          <pre>{{ parsedJson | json }}</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Pipe -->
+  <section class="section custom">
+    <h3>🔄 Custom Pipe: Reverse</h3>
+    <div class="card">
+      <input [(ngModel)]="message" placeholder="Type text to reverse..." />
+      <p><strong>Reversed:</strong> {{ message | reverse }}</p>
+    </div>
+  </section>
+</div>

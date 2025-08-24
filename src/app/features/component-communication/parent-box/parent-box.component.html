@@ -1,0 +1,17 @@
+<div class="parent-box">
+    <h3> 👨Parent Component</h3>
+    <p class="reply-text">
+        Message from Child: <strong>{{ replyMessage }}</strong>
+    </p>
+    <div class="input-area">
+        <input [(ngModel)]="message" placeholder="Type a message..." />
+        <button (click)="SendMessageToChild()">Send to Child </button>
+    </div>
+    <div class="child-container">
+        <h4>Child Container</h4>
+        <app-child-box 
+            [childInput]="childMessage"  
+            (childOutput)="HandleMessageFromChild($event)">
+        </app-child-box>
+    </div>
+</div>

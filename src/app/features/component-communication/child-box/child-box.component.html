@@ -1,0 +1,9 @@
+<div class="child-box">
+  <h4>👶 Child Component</h4>
+  <p>Message from Parent: <strong>{{ childInput }}</strong></p>
+
+     <div class="input-area">
+        <input [(ngModel)]='messageToParent' placeholder="Type a message..." />
+        <button (click)="sendMessageToParent()">Send to Parent</button>
+    </div>
+</div>

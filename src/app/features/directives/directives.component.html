@@ -1,0 +1,37 @@
+<div class="directives-demo">
+  <h2>🌟 Directives Demo</h2>
+
+  <!-- *ngIf demo -->
+  <div class="card">
+    <h3>*ngIf Example</h3>
+    <button (click)="toggle()">Toggle Message</button>
+    <p *ngIf="showMessage">Hello! 👋 This text is conditionally shown.</p>
+  </div>
+
+  <!-- *ngFor demo -->
+  <div class="card">
+    <h3>*ngFor Example</h3>
+    <ul>
+      <li *ngFor="let item of items; let i = index">
+        {{ i + 1 }}. {{ item }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- ngClass demo -->
+  <div class="card">
+    <h3>ngClass Example</h3>
+    <p [ngClass]="{ 'highlighted': isActive }">
+      This text will {{ isActive ? 'glow ✨' : 'reset' }}.
+    </p>
+    <button (click)="isActive = !isActive">Toggle Style</button>
+  </div>
+
+  <!-- Custom Directive -->
+  <div class="card">
+    <h3>Custom Directive Example</h3>
+    <p appHighlight>
+      Hover over this text to see the <strong>HighlightDirective</strong> in action!
+    </p>
+  </div>
+</div>

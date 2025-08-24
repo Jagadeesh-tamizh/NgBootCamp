@@ -1,0 +1,16 @@
+<div class="signals-demo">
+  <h2>🔔 Signals Demo</h2>
+
+  <div class="counter-box">
+    <button class="btn" (click)="decrement()">-</button>
+    <span class="count">{{ count() }}</span>
+    <button class="btn" (click)="increment()">+</button>
+  </div>
+
+  <p class="status">
+    Number is 
+    <strong [class.even]="isEven()" [class.odd]="!isEven()">
+      {{ isEven() ? 'Even' : 'Odd' }}
+    </strong>
+  </p>
+</div>
