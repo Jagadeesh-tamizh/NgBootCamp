@@ -14,7 +14,7 @@ export class ChildBoxComponent {
   @Input() childInput = '';
   @Output() childOutput = new EventEmitter<string>();
 
-  sendMessageToParent() {
+  SendMessageToParent() {
     this.childOutput.emit(this.messageToParent);
   }
 }

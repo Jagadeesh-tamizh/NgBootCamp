@@ -14,7 +14,7 @@ export class DirectivesComponent {
   items = ['Angular', 'React', 'Vue', 'Svelte'];
   isActive = false;
 
-  toggle() {
+  Toggle() {
     this.showMessage = !this.showMessage;
   }
 }

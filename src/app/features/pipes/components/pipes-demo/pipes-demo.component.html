@@ -18,7 +18,7 @@
     <div class="card">
       <div class="date-section">
         <label for="dateInput">Pick a Date:</label>
-        <input type="date" id="dateInput" [(ngModel)]="selectedDateStr" (change)="updateDate()" />
+        <input type="date" id="dateInput" [(ngModel)]="selectedDateStr" (change)="UpdateDate()" />
 
         <div class="output">
           <p><strong>Raw JavaScript Date:</strong> {{ selectedDate }}</p>

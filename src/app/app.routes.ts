@@ -7,9 +7,9 @@ import { PipesDemoComponent } from './features/pipes/components/pipes-demo/pipes
 import { ServiceDemoComponent } from './features/service-demo/service-demo/service-demo.component';
 
 export const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'component-communication', component: ComponentCommunicationComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'signals', component: SignalsDemoComponent },
   { path: 'directives', component: DirectivesComponent },
   { path: 'pipes', component: PipesDemoComponent },

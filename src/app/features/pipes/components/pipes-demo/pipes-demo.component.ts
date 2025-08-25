@@ -26,7 +26,7 @@ export class PipesDemoComponent {
   message = '';
   builtInPipeText = '';
 
-  updateDate() {
+  UpdateDate() {
     // Convert input string (yyyy-MM-dd) to Date
     this.selectedDate = this.selectedDateStr ? new Date(this.selectedDateStr) : new Date();
   }

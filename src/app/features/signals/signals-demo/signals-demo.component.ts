@@ -12,11 +12,11 @@ export class SignalsDemoComponent {
   // computed signal
   isEven = computed(() => this.count() % 2 === 0);
 
-  increment() {
+  Increment() {
     this.count.update(value => value + 1);
   }
 
-  decrement() {
+  Decrement() {
     this.count.update(value => value - 1);
   }
 }
