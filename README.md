@@ -54,7 +54,7 @@ This project is built using **Angular Standalone Components**, styled with **LES
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/NgBootCamp.git
+   git clone https://github.com/Jagadeesh-tamizh/NgBootCamp.git
    cd NgBootCamp
    ````
 
@@ -125,7 +125,6 @@ src/
 * Add **Forms (Reactive & Template-driven)**.
 * Add **Route Guards & Lazy Loading**.
 * Demo **HTTPClient** with mock API.
-* Deploy to GitHub Pages / Vercel.
 
 ---
 
